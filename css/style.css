@@ -29,6 +29,14 @@ h4{
     height: 100vh;
 }
 
+#memorize-section.display-none{
+    display: none;
+}
+
+#input-section.display-none{
+    display: none;
+}
+
 /* Memorize Section */
 
 #memorize-section{
@@ -58,8 +66,6 @@ h4{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    display: none;
 }
 
 /* Form */

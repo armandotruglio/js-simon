@@ -49,9 +49,22 @@ form.addEventListener('submit', (event) => {
 
     console.log(randomNumbers);
     const matchedNumbers = [];
+    const inputNumbers = [];
 
     for (let i = 0; i < maxNumbers; i++) {
+
         num = parseInt(resultInputNumbers[i].value);
+        
+        if(!inputNumbers.includes(num)){
+            inputNumbers.push(num);
+        }
+        else{
+            alert('Hai inserito un duplicato');
+            return;
+        }
+
+        console.log(inputNumbers);
+
         console.log(num);
         if (randomNumbers.includes(num)) {
             matchedNumbers.push(num);
@@ -61,7 +74,7 @@ form.addEventListener('submit', (event) => {
     const result = document.createElement('p');
 
     result.innerText = matchedNumbers.length != 0 ? 
-    `Hai indovinato i numeri ${matchedNumbers}` 
+    `Hai indovinato ${matchedNumbers.length} numeri: (${matchedNumbers})` 
     : `Non hai ricordato nessun numero`
 
     inputSection.appendChild(result);

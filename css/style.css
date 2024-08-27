@@ -1,0 +1,70 @@
+/* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Generics */
+
+ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+li{
+    font-size: 2rem;
+}
+
+h4{
+    margin: 2rem;
+}
+
+/* Utils */
+
+.container{
+    height: 100vh;
+}
+
+/* Memorize Section */
+
+#memorize-section{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Timer */
+
+.timer{
+    margin: 2rem;
+}
+
+.timer span{
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+/* Input Section */
+
+#input-section{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    display: none;
+}
+
+/* Form */
+
+form input{
+    margin: 1rem;
+    width: 50px;
+}

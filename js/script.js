@@ -4,12 +4,19 @@ const resultTimer = document.getElementById('timer');
 const resultRandomNumbers = document.getElementById('numbers');
 const inputSection = document.getElementById('input-section');
 const form = document.querySelector('form');
-const resultInputNumbers = document.querySelectorAll('input');
 const button  = document.querySelector('button');
 
 let counter = 30;
 const maxNumbers = 5;
 const randomNumbers = [];
+
+//Creo gli input nel form
+for(let i = 0; i < maxNumbers; i++){
+    element = document.createElement('input');
+    element.type = 'number';
+
+    form.appendChild(element);
+}
 
 //Ogni secondo si aggiorna il timer
 const interval = setInterval(() => {
@@ -45,6 +52,7 @@ while (randomNumbers.length < maxNumbers) {
 
 //Acquisisco i 5 numeri dal form
 form.addEventListener('submit', (event) => {
+    const resultInputNumbers = document.querySelectorAll('input');
     event.preventDefault();
 
     console.log(randomNumbers);
@@ -54,7 +62,7 @@ form.addEventListener('submit', (event) => {
     for (let i = 0; i < maxNumbers; i++) {
 
         num = parseInt(resultInputNumbers[i].value);
-        
+
         if(!inputNumbers.includes(num)){
             inputNumbers.push(num);
         }
